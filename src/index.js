@@ -139,3 +139,50 @@ const arr7 = [...arr6, ...arr5];
 //   }
 // });
 // console.log(nameArr3);
+
+/**
+ * 三項演算子
+ * ある条件　　？　　　A　　：　　B
+ */
+
+const value = 1 > 0 ? "true" : "false";
+//console.log(value);
+
+const number1 = 1300;
+//console.log(number1.toLocaleString(number1));
+//数値が来た場合、三桁区切りにする
+
+const formattedNum =
+  typeof number1 === "number"
+    ? number1.toLocaleString
+    : "数値型を入力してください";
+//console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+};
+//console.log(checkSum(50,60))
+
+/**
+ * 論理演算子
+ * && ||
+ */
+const flag1 = "true";
+const flag2 = "faise";
+
+// if(flag1 || flag2){
+//   console.log('または')
+// }
+// if(flag1 && flag2){
+//   console.log('かつ')
+// }
+
+// ||の右側がfalseの時、左側を返すの意味
+const fee1 = null; //nullはfalse判定
+const fee2 = fee1 || "金額未設定";
+console.log(fee2);
+
+//　＆＆の左側がtrueの時、右側を返す
+const fee3 = 100; //数値はtrue判定
+const answer = fee3 && "何か設定されたよ";
+console.log(answer);
